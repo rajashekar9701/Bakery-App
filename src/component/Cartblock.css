@@ -1,0 +1,7 @@
+
+.card-item:hover{
+    box-shadow:black 0px 0px 8px -2px;
+    transform: scale(1);
+    opacity: 1;
+
+}

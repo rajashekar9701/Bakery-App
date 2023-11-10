@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import Homepage from "./component/Homepage/homepage";
+import "/node_modules/bootstrap/dist/css/bootstrap.min.css";
+import { CartProvider } from "react-use-cart";
+import Cartblock from "./component/Cartblock";
+import { useEffect } from "react";
+import { gapi } from "gapi-script";
+import "./App.css";
+import Footer from "./component/Footer";
+const clientId =
+  "943264069242-a96qq5kild8hahup8lfufaeoqq53t95i.apps.googleusercontent.com";
 
 function App() {
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        client: clientId,
+        scope: "",
+      });
+    }
+    gapi.load("client:auth2", start);
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CartProvider>
+        <Homepage />
+        <Cartblock />
+      </CartProvider>
+      <Footer />
     </div>
   );
 }

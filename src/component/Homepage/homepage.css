@@ -1,0 +1,48 @@
+.h1 {
+  font-family: serif;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: cadetblue;
+  padding: 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  color: aliceblue;
+}
+.icon-cont {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+}
+
+.btn-cart-icon {
+  position: relative;
+  height: 44px;
+  width: 70px;
+  margin-top: 11px;
+}
+
+.cart-icon {
+  position: relative;
+  display: inline-block;
+}
+
+.item-count {
+  position: absolute;
+  margin-top: -22px;
+  margin-right: 55px;
+  top: 0;
+  background-color: crimson; /* You can customize the background color */
+  color: white;
+  border-radius: 50%;
+  padding: 0.2em 0.5em;
+  font-size: 15px; /* Adjust the font size as needed */
+}
+.h-name {
+  padding-top: 16px;
+  font-family: inherit;
+  font-size: 28px;
+}
